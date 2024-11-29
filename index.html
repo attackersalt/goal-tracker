@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Tracker</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Goal Tracker</h1>
+        <dialog>
+            <h1>Make a goal...</h1>
+            <form method="dialog">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="description">Description: </label>
+                    <input type="text" name="description" id="description" required>
+                </div>
+                <div>
+                    <label for="initprog">Initial Progress?: </label>
+                    <input type="number" min=0 max=100 name="initprog" id="initprog" value="0" required>
+                </div>
+                <div>
+                    <label for="step">Step (non-permanent): </label>
+                    <input type="number" min=1 max=33 name="step" id="step" value="5" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
+        <div id="add-goal"></div>
+        <div id="active-goals"></div>
+    </div>
+    <script type="module" src="src/scripts/main.js"></script>
+</body>
+</html>
